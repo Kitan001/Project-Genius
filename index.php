@@ -99,13 +99,13 @@
        <div class="form">
        <form id="register" action="" method="post" class="input-group">
                 <input type="text" name="user_id" class="input-field" placeholder="Username" >
-                <input type="text" name="email_id" class="input-field" placeholder="Email Id" >
+                <input type="email" name="email_id" class="input-field" placeholder="Email Id" >
                 <div class="field input ">
                 <input type="password" class="input-field" name="password" placeholder="Enter password" required>
                 <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
                  </div>
                 <div class="field input ">
-                <input type="password" class="input-field" name="password" placeholder="Enter password" required>
+                <input type="password" class="input-field" name="password_confirm" placeholder="Enter password" required>
                 <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
                  </div>
                 <select class="input-field2" name="status" id="Status">

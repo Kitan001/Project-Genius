@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    background: lightgray;
+    position: relative;
+    display: flex;
+}
+
+#menu {
+    background: #111827;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+#menu .items {
+    margin-top: 5.25em;
+    border-top: 3px solid white;
+}
+
+#menu .items li{
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+    color: white;
+}
+
+
+#menu .items li:hover {
+    background: #253047;
+    cursor: pointer;
+}
+
+
+#menu .items li i{
+    color: rgb(134, 141, 151);
+    width: 30px;
+    height: 20px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+}
+
+#menu .items li:hover i,
+#menu .items li:hover a{
+    color: #F3F4F6;
+}
+
+#menu .items li a{
+    text-decoration: none;
+    color: rgb(134, 141, 151);
+    font-weight: 300px;
+    transition: 0.3s ease;
+}
+
+#menu .items2 {
+    margin-top: 3em;
+    border-top: 3px solid white ;
+}
+
+#menu .items2 li{
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+    color: white;
+}
+
+
+#menu .items2 li:hover {
+    background: #253047;
+    cursor: pointer;
+}
+
+
+#menu .items2 li i{
+    color: rgb(134, 141, 151);
+    width: 30px;
+    height: 20px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+}
+
+#menu .items2 li:hover i,
+#menu .items2 li:hover a{
+    color: #F3F4F6;
+}
+
+#menu .items2 li a{
+    text-decoration: none;
+    color: rgb(134, 141, 151);
+    font-weight: 300px;
+    transition: 0.3s ease;
+}
+
+#interface{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    position: relative;
+}
+
+
+#interface .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 14px 28px;
+    border-bottom: 3px solid;
+    position: fixed;
+    width: calc(100% - 300px);
+}
+
+
+#interface .navigation .text span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#interface .navigation .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #d7db6b;
+    border-radius: 10px;
+    margin-left: 11em;
+}
+
+#interface .navigation .search i{
+    margin-right: 14px;
+}
+
+#interface .navigation .search input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+#interface .navigation .profile{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#interface .navigation .profile i{
+    margin-right: 18px;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#interface .navigation .profile img{
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+}
+
+.n1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#menu-btn {
+    display: none;
+    color: #2b2b2b;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.values{
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.values2{
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+
+.values .val-box{
+    background: #ffff;
+    width: 235px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 6em;
+    margin-bottom: 20px;
+    margin-left: 6px;
+}
+
+.values .val-box:hover,
+.values .val-box:hover i,
+.values .val-box:hover span{
+    cursor: pointer;
+    color: gray;
+}
+
+.values .val-box i{
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    line-height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    color: black;
+    margin-right: 15px;
+}
+.values .val-box:nth-child(1) i {
+    background: lightblue;
+}
+.values .val-box:nth-child(2) i {
+    background: lightsalmon ;
+}
+.values .val-box:nth-child(3) i {
+    background: lightblue;
+}
+
+.values2 .val-box h3{
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 1em;
+}
+.values2 .val-box span{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    margin-left: 2em;
+}
+
+
+.values2 .val-box{
+    background: #ffff;
+    width: 235px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: 6px;
+
+}
+
+.values2 .val-box:hover,
+.values2 .val-box:hover i,
+.values2 .val-box:hover span{
+    cursor: pointer;
+    color: gray;
+}
+
+.values2 .val-box i{
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    margin-right: 15px;
+}
+.values2 .val-box:nth-child(1) i {
+    background: limegreen;
+}
+.values2 .val-box:nth-child(2) i {
+    background: lightblue;
+}
+.values2 .val-box:nth-child(3) i {
+    background: limegreen;
+}
+
+
+.values .val-box h3{
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 1em;
+}
+
+.values .val-box span{
+    font-size: 12px;
+    font-weight: bold;
+    color:black;
+    margin-left: 2.5em;
+}
+
+
+.values3{
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+
+.values3 .val-box h3{
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 0.5em;
+}
+
+.values3 .val-box span{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    margin-left: 2.5em;
+}
+
+.values3 .val-box{
+    background: #ffff;
+    width: 235px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 6px;
+
+
+}
+
+.values3 .val-box:hover,
+.values3 .val-box:hover i,
+.values3 .val-box:hover span{
+    cursor: pointer;
+    color: gray;
+}
+
+.values3 .val-box i{
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color:black;
+    margin-right: 15px;
+}
+.values3 .val-box:nth-child(1) i {
+    background:  lightsalmon;
+}
+.values3 .val-box:nth-child(2) i {
+    background: limegreen ;
+}
+.values3 .val-box:nth-child(3) i {
+    background: lightsalmon ;
+}
+
+.board{
+    width: 94%;
+    margin: 30px 0 30px 30px;
+    overflow: auto;
+    background: #ffff;
+    border-radius: 8px;
+}
+
+@media (max-width: 769px) {
+    #menu {
+        width: 270px;
+        position: fixed;
+        left: -270px;
+        transition: 0.3s ease;
+    }
+
+    #menu.active {
+        left: 0px;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+    #interface{
+        width: 100%;
+        margin-left: 0px;
+       display: inline-block;
+       transition: 0.3s ease;
+    }
+
+    #menu.active~ #interface {
+        width: calc(100% - 270px);
+        margin-left: 270px;
+        transition: 0.3s ease;
+    }
+
+    #interface .navigation{
+        width: 100%;
+    }
+    
+    .values{
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start;
+    }
+
+    .values .val-box{
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+
+    .values2{
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start;
+    }
+
+    .values2 .val-box{
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+
+    .values3{
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start;
+    }
+
+    .values3 .val-box{
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+}
+
+
+@media (max-width: 477px) {
+    #interface .navigation{
+        padding: 15px;
+    }
+
+    #interface .navigation .text span{
+        display:none;
+    }
+    
+    #interface .navigation .search {
+        display:none;
+    }
+
+
+    #interface .navigation .search input{
+       width: 150px;
+    }
+
+    .i-name{
+        padding: 30px 15px 0 15px;
+    }
+
+    .values{
+        padding: 15px 15px 0 15px;
+    }
+
+    .values .val-box{
+    margin-top: 10px;
+       width: 100%;
+       margin: 8px 0;
+    }
+
+    .values2{
+        padding: 15px 15px 0 15px;
+    }
+
+    .values2 .val-box{
+       width: 100%;
+       margin: 8px 0;
+    }
+
+    .values3{
+        padding: 15px 15px 0 15px;
+    }
+
+    .values3 .val-box{
+       width: 100%;
+       margin: 8px 0;
+    }
+
+
+   
+}

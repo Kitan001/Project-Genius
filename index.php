@@ -1,3 +1,10 @@
+<?php
+session_start();
+ if(isset($_SESSION['unique_id'])){
+     header("location: dashboardIndex.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +47,8 @@
             </form>
             <?php
             include 'database.php';
+        
+        
             if(isset($_POST['submit'])){
                 if(empty($_POST['user_id'])){
                     echo "<script>swal('Username is required')</script>";
@@ -59,7 +68,7 @@
                 }else{
                     $name= $_POST['user_id'];
                     $email=$_POST['email_id'];
-                    $sqlQuery = "select * from `users` where email_id= '$email'";
+                    $sqlQuery = "select * from `Usertable` where email= '$email'";
                     $query= mysqli_query($con, $sqlQuery);
                     $sqlQuer = "select * from `users` where user_id= '$name'";
                     $quer= mysqli_query($con, $sqlQuer);
@@ -72,40 +81,40 @@
                         $name= $_POST['user_id'];
                         $email=$_POST['email_id'];
                         $password= $_POST['password'];
-                        $password_conf=$_POST['password_confirm'];
+                        #$password_conf=$_POST['password_confirm'];
                     
                         $status=$_POST['status'];
-                      
-                        $sql="INSERT INTO `users` (user_id,email_id, password, password_confirm, status ) VALUES ('$name', '$email', '$password', '$password_conf', '$status')";
+                        $ran_id = rand(time(), 100000000);
+                        $sql="INSERT INTO `Usertable` (unique_id,username,email, password, status ) VALUES ('$ran_id','$name', '$email', '$password', '$status')";
                         $result=mysqli_query($con, $sql);
                         if($result){
-                            $sel="select * from `users` where status='".$status."'";
+                            $sel="select * from `Usertable` where status='".$status."'";
                         $result=mysqli_query($con, $sel);
                         $row=mysqli_fetch_array($result);
                         if($row["status"] == "Student"){
-                            $_SESSION["user_id"]=$name;
-                            header("location:student.html");
+                            $_SESSION['unique_id']=$ran_id;
+                            header("location:student.php");
                          }elseif($row["status"] == "Teacher"){
-                            $_SESSION["user_id"]=$name;
-                            header("location:teacher.html");
+                            $_SESSION['unique_id']=$ran_id;
+                            header("location:teacher.php");
                          }else{
                             echo '<script>swal("Not A Vaild User")</script>';
                          }
                     }
                     }
-                }
+                } 
             }
             ?>
        <div class="form">
        <form id="register" action="" method="post" class="input-group">
-                <input type="text" name="user_id" class="input-field" placeholder="Username" >
+                 <input type="text" name="user_id" placeholder="Username" class="input-field" required>
                 <input type="email" name="email_id" class="input-field" placeholder="Email Id" >
                 <div class="field input ">
                 <input type="password" class="input-field" name="password" placeholder="Enter password" required>
                 <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
                  </div>
                 <div class="field input ">
-                <input type="password" class="input-field" name="password_confirm" placeholder="Enter password" required>
+                <input type="password" class="input-field" name="password_confirm" placeholder="Confirm password" required>
                 <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
                  </div>
                 <select class="input-field2" name="status" id="Status">

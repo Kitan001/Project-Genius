@@ -24,7 +24,7 @@ body{
 
 
 #menu .items {
-    margin-top: 5.25em;
+    margin-top: 2.25em;
     border-top: 3px solid white;
 }
 
@@ -34,14 +34,29 @@ body{
     transition: 0.3s ease;
     color: white;
 }
-
-
+.detailed{
+    display: flex;
+}
+.detailed .determine{
+    margin-left: 30vh;
+}
 #menu .items li:hover {
     background: #253047;
     cursor: pointer;
 }
 
-
+.det{
+    display: flex;
+    margin-top: 20px;
+}
+.det img{
+    margin-left: 40px;
+}
+.det .user{
+    color: #F3F4F6;
+    margin-right: 100px;
+    margin-top: 20px;
+}
 #menu .items li i{
     color: rgb(134, 141, 151);
     width: 30px;
@@ -61,6 +76,7 @@ body{
     text-decoration: none;
     color: rgb(134, 141, 151);
     font-weight: 300px;
+    padding: 0 30px;
     transition: 0.3s ease;
 }
 
@@ -100,6 +116,7 @@ body{
 
 #menu .items2 li a{
     text-decoration: none;
+    padding: 0 30px;
     color: rgb(134, 141, 151);
     font-weight: 300px;
     transition: 0.3s ease;
@@ -110,7 +127,9 @@ body{
     margin-left: 300px;
     position: relative;
 }
-
+#int{
+    display: none;
+}
 
 #interface .navigation{
     display: flex;
@@ -118,6 +137,17 @@ body{
     justify-content: space-between;
     background: #fff;
     padding: 14px 28px;
+    border-bottom: 3px solid;
+    position: fixed;
+    width: calc(100% - 300px);
+}
+#interface .navigate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 14px 28px;
+    /* margin-top: -40px; */
     border-bottom: 3px solid;
     position: fixed;
     width: calc(100% - 300px);
@@ -173,6 +203,12 @@ body{
     align-items: center;
 }
 
+.n2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 #menu-btn {
     display: none;
     color: #2b2b2b;
@@ -184,6 +220,7 @@ body{
 .values{
     padding: 30px 30px 0 30px;
     display: flex;
+    /* padding-right: 90pc; */
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -368,7 +405,17 @@ body{
 .values3 .val-box:nth-child(3) i {
     background: lightsalmon ;
 }
-
+.wrap{
+    margin-left:200px;
+}
+.profile-img{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 .board{
     width: 94%;
     margin: 30px 0 30px 30px;
@@ -376,12 +423,15 @@ body{
     background: #ffff;
     border-radius: 8px;
 }
-
+.hero{
+    margin-left: 40px;
+}
 @media (max-width: 769px) {
     #menu {
         width: 270px;
         position: fixed;
         left: -270px;
+        overflow-y: scroll;
         transition: 0.3s ease;
     }
 
